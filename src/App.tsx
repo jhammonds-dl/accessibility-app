@@ -7,7 +7,7 @@ function App() {
   return (
     <PageContainer component="main">
       <Switch>
-        <Route path="/images" component={ImageComparison} />
+        <Route component={ImageComparison} />
         {/* Default route in a switch */}
         <Route>
           <h1>404: No such page!</h1>
