@@ -1,3 +1,23 @@
 ul {
     list-style: none;
 }
+
+.keyboardOnlyForm {
+    pointer-events: none;
+}
+
+.question {
+    width: 100%;
+    font-size: 16px;
+    margin: 2% auto;
+    padding: 10px;
+}
+
+.question:focus { 
+    outline: none; 
+}
+
+.answerText {
+    font-style: italic;
+    color: orange;
+}

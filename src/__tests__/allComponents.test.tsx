@@ -3,25 +3,21 @@
 import { axe, toHaveNoViolations } from "jest-axe";
 import { render } from "@testing-library/react";
 import App from "../App";
-import JSImage from "../components/JSImage/JSImage";
-import JSImageNoAlt from "../components/JSImage/JSImageNoAlt";
-import MUIImage from "../components/MUIImage/MUIImage";
-import MUIImageNoAlt from "../components/MUIImage/MUIImageNoAlt";
-import RBImage from "../components/RBImage/RBImage";
-import RBImageNoAlt from "../components/RBImage/RBImageNoAlt";
-import ImageComparison from "../pages/ImageComparison/ImageComparison";
+import InaccessiblePage from "../pages/InaccessiblePage/InaccessiblePage";
+import InaccessibleForm from "../components/InaccessibleForm/InaccessibleForm";
+import StartPage from "../pages/StartPage";
+import FinishPage from "../pages/FinishPage";
+import ExerciseComplete from "../pages/ExerciseComplete/ExerciseComplete";
 
 expect.extend(toHaveNoViolations);
 
 describe.each([
   { Component: App, props: {} },
-  { Component: ImageComparison, props: {} },
-  { Component: JSImage, props: {} },
-  { Component: JSImageNoAlt, props: {} },
-  { Component: MUIImage, props: {} },
-  { Component: MUIImageNoAlt, props: {} },
-  { Component: RBImage, props: {} },
-  { Component: RBImageNoAlt, props: {} },
+  { Component: InaccessiblePage, props: {} },
+  { Component: InaccessibleForm, props: {} },
+  { Component: StartPage, props: {} },
+  { Component: FinishPage, props: {} },
+  { Component: ExerciseComplete, props: {} },
 ])("Testing $Component.name component", ({ Component, props }) => {
   it("should render", () => {
     render(<Component {...props} />);
